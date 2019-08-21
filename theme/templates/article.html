@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block headerimg %}{% if article.headerimg %}{{ article.headerimg }}{% else %}{{ DEFAULT_HEADER_BG }}{% endif %}{% endblock %}
+
+
+{% block content %}
+<div class="container post">
+    <article>
+        <header>
+            <h1>{{ article.title }}</h1>
+            <time datetime="article.date.isoformat()" pubdate>{{ article.locale_date }}</time>
+        </header>
+
+        <div class="article_content">
+            {{ article.content }}
+        </div>
+
+        <div class="meta">
+            <div>
+                {% for tag in article.tags %}
+                    <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </article>
+
+</div>
+
+<style type="text/css">
+{% include 'ipy.css' %}
+</style>
+
+{% endblock %}
