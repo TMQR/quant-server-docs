@@ -40,3 +40,4 @@ PAGE_PATHS = ['pages']
 THEME = './theme/'
 
 ABOUT_PAGE = SITEURL + '/pages/about.html'
+SITESUBURL = 'quant-server-docs'
