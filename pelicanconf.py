@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Zoran Pandovski'
 SITENAME = 'Quant Server Documentation'
-SITEURL = 'https://tmqr.github.io/quant-server-docs/'
+SITEURL = 'https://tmqr.github.io/quant-server-docs'
 
 PATH = 'content'
 
@@ -34,6 +34,9 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+PAGE_PATHS = ['pages']
 
 # THEME SETTINGS
 THEME = './theme/'
+
+ABOUT_PAGE = '/pages/about.html'
