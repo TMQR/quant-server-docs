@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Zoran Pandovski'
 SITENAME = 'Quant Server Documentation'
-SITEURL = ''
+SITEURL = 'https://tmqr.github.io/quant-server-docs/'
 
 PATH = 'content'
 
