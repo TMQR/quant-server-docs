@@ -338,37 +338,72 @@
     </header>
 
     <div id="wrap">
-<section id="content">
-<h2>Articles by Zoran Pandovski</h2>
-
-<ol id="post-list">
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/first-post.html" rel="bookmark" title="Permalink to First Post">First Post</a></h2> </header>
-                <footer class="post-info">
-                    <time class="published" datetime="2019-12-03T10:20:00+01:00"> вто 03 декември 2019 </time>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/zoran-pandovski.html">Zoran Pandovski</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">ffn</span><span class="o">,</span><span class="nn">bt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
-</pre></div>
+<div class="container index">
 
 
-<div class="highlight"><pre><span></span>
-</pre></div>
+    <div class="meta">
+      <div>
+        <a href="https://tmqr.github.io/quant-server-docs/first-post.html" class="read_more">First Post</a>
+      </div>
+    </div>
 
+  <ol>
+    <li>Setup and AWS installation:</li>
+    <ul>
+        <li>JupyterLab Installation.</li>
+        <li>Mongo setup, explanation of key collections, a record of required keys and settings.</li>
+        <li>Example notebooks for adding new products, checking the health of MongoData.</li>
+        <ul>
+            <li>Required startup protocol for healthy IQfeed and QuantServer. Is everything running?</li>
+        </ul>
+        <li>Setting up a sandbox for 3rd party developers.</li>
+        <li>Splitting off instances for separate client projects.</li>
+    </ul>
+    <li>Data feed and Data Sources:</li>
+    <ul>
+        <li>Explanatory notebooks of IQfeed connectivity, a record of setting and passwords.</li>
+        <li>Example of how to connect to an alternative data source and integrate with existing Mongo collections.</li>
+        <ul>
+            <li>Examples Coinbase,  http://www.kibot.com/, csv,  tiingo, alpha vantage.</li>
+        </ul>
+        <li>Example notebook of the data manager (DM), what can be called (continuous vs individual futures).</li>
+    </ul>
+    <li>Live Trading  scripts and setup:</li>
+    <ul>
+        <li>Explanatory notebook of key live trading scripts and their respective roles.</li>
+        <li>Stunnel, UAT and Production settings. Refer to TT_FIX Bitbucket repo possbly.</li>
+        <li>Record of API and REST settings and passwords.</li>
+        <li>Explanatory notebook on  Slack watchdog.</li>
+        <li>Explanation of logs:</li>
+        <ul>
+            <li>execution</li>
+            <li>data</li>
+            <li>campaigns</li>
+        </ul>
+    </ul>
+    <li>Alpha Development / Portfolio Construction:</li>
+    <ul>
+        <li> Example notebooks for each available alpha style with the stated goal to thesis for each alpha strategy.</li>
+        <ul>
+            <li>long volatility,  momentum, contrarian etc.</li>
+        </ul>
+        <li>Example notebooks for making "hello world" alpha strategy.</li>
+        <li>Explanation notebooks for types of portfolio construction.</li>
+        <ul>
+            <li>Risk Parity, Equal-weight, Simple.</li>
+            <li>Reinvestment, Initial capital and their roll in the position calculation.</li>
+        </ul>
+        <li> Swarm walkthrough:</li>
+    </ul>
+    <li>Campaign and Accounts:</li>  
+    <ul>
+        <li>Explanatory notebook of Campaign backtesting vs. live mode.</li>
+        <li> Explanation of required live account settings.</li>
+    </ul> 
+    <li>Publishing Showcase notebooks for an external audience:</li>
+    <li>Dashboarding:</li>
+  </ol> 
 
-<div class="highlight"><pre><span></span><span class="c1"># fetch some data</span>
-<span class="c1"># data = bt.get(&#39;tvix,spy,tlt,IGSB, VCSH, agg, tbt, shy &#39;, start=&#39;2010-01-01&#39;)</span>
-<span class="c1"># data = bt.get(&#39;spy, viix &#39;, start=&#39;2010-01-01&#39;)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">get …</span></pre></div> </div><!-- /.entry-content -->
-        </article></li>
-</ol><!-- /#posts-list -->
-</section><!-- /#content -->
+</div>
+
     </div>
