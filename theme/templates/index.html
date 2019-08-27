@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block headerimg %}{{ DEFAULT_HEADER_BG }}{% endblock %}
+
+{% block content %}
+<div class="container index">
+
+  {% for article in articles_page.object_list %}
+
+    <div class="meta">
+      <div>
+        <a href="{{ SITEURL }}/{{ article.url }}" class="read_more">{{article.title}}</a>
+      </div>
+    </div>
+  {% endfor %}
+
+  <ol>
+    <li>Setup and AWS installation:</li>
+    <ul>
+        <li>JupyterLab Installation.</li>
+        <li>Mongo setup, explanation of key collections, a record of required keys and settings.</li>
+        <li>Example notebooks for adding new products, checking the health of MongoData.</li>
+        <ul>
+            <li>Required startup protocol for healthy IQfeed and QuantServer. Is everything running?</li>
+        </ul>
+        <li>Setting up a sandbox for 3rd party developers.</li>
+        <li>Splitting off instances for separate client projects.</li>
+    </ul>
+    <li>Data feed and Data Sources:</li>
+    <ul>
+        <li>Explanatory notebooks of IQfeed connectivity, a record of setting and passwords.</li>
+        <li>Example of how to connect to an alternative data source and integrate with existing Mongo collections.</li>
+        <ul>
+            <li>Examples Coinbase,  http://www.kibot.com/, csv,  tiingo, alpha vantage.</li>
+        </ul>
+        <li>Example notebook of the data manager (DM), what can be called (continuous vs individual futures).</li>
+    </ul>
+    <li>Live Trading  scripts and setup:</li>
+    <ul>
+        <li>Explanatory notebook of key live trading scripts and their respective roles.</li>
+        <li>Stunnel, UAT and Production settings. Refer to TT_FIX Bitbucket repo possbly.</li>
+        <li>Record of API and REST settings and passwords.</li>
+        <li>Explanatory notebook on  Slack watchdog.</li>
+        <li>Explanation of logs:</li>
+        <ul>
+            <li>execution</li>
+            <li>data</li>
+            <li>campaigns</li>
+        </ul>
+    </ul>
+    <li>Alpha Development / Portfolio Construction:</li>
+    <ul>
+        <li> Example notebooks for each available alpha style with the stated goal to thesis for each alpha strategy.</li>
+        <ul>
+            <li>long volatility,  momentum, contrarian etc.</li>
+        </ul>
+        <li>Example notebooks for making "hello world" alpha strategy.</li>
+        <li>Explanation notebooks for types of portfolio construction.</li>
+        <ul>
+            <li>Risk Parity, Equal-weight, Simple.</li>
+            <li>Reinvestment, Initial capital and their roll in the position calculation.</li>
+        </ul>
+        <li> Swarm walkthrough:</li>
+    </ul>
+    <li>Campaign and Accounts:</li>  
+    <ul>
+        <li>Explanatory notebook of Campaign backtesting vs. live mode.</li>
+        <li> Explanation of required live account settings.</li>
+    </ul> 
+    <li>Publishing Showcase notebooks for an external audience:</li>
+    <li>Dashboarding:</li>
+  </ol> 
+
+</div>
+
+{% endblock %}
+
