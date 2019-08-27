@@ -39,4 +39,4 @@ PAGE_PATHS = ['pages']
 # THEME SETTINGS
 THEME = './theme/'
 
-ABOUT_PAGE = '/pages/about.html'
+ABOUT_PAGE = SITEURL + '/pages/about.html'
